@@ -41,7 +41,7 @@ public class CanvasTest extends JFrame {
 	final static int fieldHeight = 80; // field height
 	
 	//h�r importerar du en bild.
-	private Image img = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/reboot/images/cancelIcon.png"));
+	private Image img = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/cancelIcon.png"));
 	
 	//font stuff
 	private ArrayList<Shape> shapeList = new ArrayList<Shape>();
@@ -174,7 +174,7 @@ public class CanvasTest extends JFrame {
 				//set font...
 				g2.setFont(fieldFont);
 				// infoga image-varibeln (img i detta fall), var den ska ritas ut och Observer ska vara "this"
-				g2.drawImage(img, 940, 90, this);
+				g2.drawImage(img,300, 300, this);
 				g2.drawLine(710, 120, 775, 120);
 
 		}
