@@ -3,7 +3,7 @@ package reboot;
 //Skapad av Mattias & Victor
 //2015-03-18
 //
-//Detta är en klass som visar posterna i schemat, till denna klass ska det tilldelas animationer och logik för att få in korrekta värden
+//Detta ï¿½r en klass som visar posterna i schemat, till denna klass ska det tilldelas animationer och logik fï¿½r att fï¿½ in korrekta vï¿½rden
 //
 //
 
@@ -29,30 +29,30 @@ public class CanvasTest extends JFrame {
 	private Panel controlPanel;
 	// diverse bra variabler att ha
 	static int screenRes = Toolkit.getDefaultToolkit().getScreenResolution();
-	final static float DPI = 72; // Pixel density 96 är standard på moderna
+	final static float DPI = 72; // Pixel density 96 ï¿½r standard pï¿½ moderna
 	public int antalElement=12;
 	
 	
-	// monitors, 72 är gamla
+	// monitors, 72 ï¿½r gamla
 	final static float PT = 7; // font size pt
-	final static int SCREEN_WIDTH = 1080;// old, 768px för LG monitorn
-	final static int SCREEN_HEIGHT = 1920;// old, 1024px för LG monitorn
+	final static int SCREEN_WIDTH = 1080;// old, 768px fï¿½r LG monitorn
+	final static int SCREEN_HEIGHT = 1920;// old, 1024px fï¿½r LG monitorn
 	final static int MIN_MODULE_HEIGHT = 80; // minimum module height
 	final static int fieldHeight = 80; // field height
 	
-	//här importerar du en bild.
-	private Image img = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/se/mah/k3/pfi2/project/kronox/graphics/cancelIcon.png"));
-
+	//hï¿½r importerar du en bild.
+	private Image img = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/reboot/images/cancelIcon.png"));
+	
 	//font stuff
 	private ArrayList<Shape> shapeList = new ArrayList<Shape>();
 	public int fontSize = (int) Math.round(PT * screenRes / DPI);
 	public Font futuraBook = new Font("Futura LT Light", Font.PLAIN, fontSize);
 	public Font futuraBold = new Font("Futura LT Bold", Font.PLAIN, fontSize);
-	public Font futuraMedium = new Font("Futura LT Medium", Font.PLAIN,fontSize);// typsnittet vi ska använda
+	public Font futuraMedium = new Font("Futura LT Medium", Font.PLAIN,fontSize);// typsnittet vi ska anvï¿½nda
 	
 	private Font fieldFont = futuraBook.deriveFont(Font.PLAIN, 25);
 	private Font headerFont = futuraBold.deriveFont(Font.PLAIN, 30);
-	// Färger
+	// Fï¿½rger
 	private Color whiteColor = Color.decode("#ffffff");
 	private Color headerYellowTextColor = Color.decode("#E5DA9F");
 	private Color headerFieldBackgroundColor = Color.decode("#3A3A39");
@@ -62,7 +62,7 @@ public class CanvasTest extends JFrame {
 	private String[] fieldValues = { "- -:- - - -:- -", "LOADING...", "Sal..." };
 	private ArrayList<String[]> valueList = new ArrayList<String[]>();
 	private  MyCanvas demo= new MyCanvas();
-	// mått
+	// mï¿½tt
 	/**
 	 * Launch the application.
 	 */
@@ -106,7 +106,7 @@ public class CanvasTest extends JFrame {
 	
 	private void prepareGUI() {
 		
-		// contentPane är huvudrutan
+		// contentPane ï¿½r huvudrutan
 		contentPane.setBackground(Color.WHITE);
 		// SetSize
 		contentPane.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -137,7 +137,7 @@ public class CanvasTest extends JFrame {
 			g2 = (Graphics2D) g;
 			
 			
-			//mjuka upp texten - behåll som det är
+			//mjuka upp texten - behï¿½ll som det ï¿½r
 			RenderingHints rh = new RenderingHints(
 					RenderingHints.KEY_TEXT_ANTIALIASING,
 					RenderingHints.VALUE_TEXT_ANTIALIAS_GASP);
@@ -151,14 +151,14 @@ public class CanvasTest extends JFrame {
 			Stroke stroke = new BasicStroke(1, BasicStroke.CAP_SQUARE,
 					BasicStroke.JOIN_BEVEL, 0, new float[] { 1, 0 }, 0);
 			g2.setStroke(stroke);
-			// Lägger till header-fältet m. text osv
+			// Lï¿½gger till header-fï¿½ltet m. text osv
 			g2.setFont(headerFont);
 			Shape headField = new Rectangle2D.Float(0, 0, SCREEN_WIDTH, fieldHeight);
 		
 			//set color med variabel
 			g2.setColor(headerYellowTextColor);
 			
-			//testa denna lite - skriver ut objektet Shape som deklareras preciis ovanför 
+			//testa denna lite - skriver ut objektet Shape som deklareras preciis ovanfï¿½r 
 			g2.fill(headField);
 
 		//	boolean colorTurn = false;
